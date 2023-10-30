@@ -22,10 +22,17 @@ module.exports = () => {
         template: './index.html',
       }),
     new WebpackPwaManifest({
-      //missing info ``````````
+      name: 'PWA text editor',
+      short_name: 'PWA_ed',
+      description: 'A Progressive Web App with an text editor',
+      background_color: '#ffffff',
+      icons: [{
+          src: path.resolve('src/images/logo.png'),
+          sizes: [96, 128, 192, 256, 384, 512],
+      },]
     }),
     new InjectManifest({
-            //missing info ``````````
+      swSrc: './client/src-sw.js',
     }),
     ],
 
